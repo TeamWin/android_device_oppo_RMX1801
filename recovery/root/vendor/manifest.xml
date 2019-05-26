@@ -142,12 +142,12 @@
     <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <version>3.0</version>
+        <version>4.0</version>
         <interface>
             <name>IKeymasterDevice</name>
             <instance>default</instance>
         </interface>
-        <fqname>@3.0::IKeymasterDevice/default</fqname>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.light</name>
@@ -183,6 +183,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IMemtrack/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.neuralnetworks</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.1::IDevice/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.power</name>
@@ -413,22 +423,22 @@
     <hal format="hidl">
         <name>vendor.display.color</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>IDisplayColor</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IDisplayColor/default</fqname>
+        <fqname>@1.2::IDisplayColor/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.display.config</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.7</version>
         <interface>
             <name>IDisplayConfig</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.1::IDisplayConfig/default</fqname>
+        <fqname>@1.7::IDisplayConfig/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.display.postproc</name>
@@ -511,14 +521,24 @@
         <fqname>@1.0::IFingerprintPay/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.camera.oppopostproc</name>
+        <name>vendor.oppo.hardware.camera.oppoAlgoProcessService</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>ICameraPostProc</name>
+            <name>IOppoAlgoProcessService</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ICameraPostProc/default</fqname>
+        <fqname>@1.0::IOppoAlgoProcessService/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oppo.hardware.camera.oppoHalAssist</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOppoHalAssist</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOppoHalAssist/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.oppo.hardware.cryptoeng</name>
@@ -529,6 +549,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ICryptoeng/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.oppo.hardware.hypnus</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IHypnusUtil</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IHypnusUtil/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.oppo.hardware.ktv</name>
@@ -573,22 +603,12 @@
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>IFactory</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.esepowermanager</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IEsePowerManager</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IEsePowerManager/default</fqname>
+        <fqname>@1.1::IFactory/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.gnss</name>
@@ -599,16 +619,6 @@
             <instance>gnss_vendor</instance>
         </interface>
         <fqname>@1.2::ILocHidlGnss/gnss_vendor</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.gnss</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ILocHidlGnss</name>
-            <instance>gnss_vendor</instance>
-        </interface>
-        <fqname>@2.0::ILocHidlGnss/gnss_vendor</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.alarm</name>
@@ -661,16 +671,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IFmHci/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.improvetouch.touchcompanion</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ITouchCompanion</name>
-            <instance>TouchCompanionService</instance>
-        </interface>
-        <fqname>@1.0::ITouchCompanion/TouchCompanionService</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>
@@ -816,6 +816,16 @@
         <fqname>@1.0::IUimRemoteServiceServer/uimRemoteServer1</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.sensorscalibrate</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorsCalibrate</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISensorsCalibrate/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.soter</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -836,6 +846,16 @@
         <fqname>@1.0::ITuiComm/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.vpp</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IHidlVppService</name>
+            <instance>vppService</instance>
+        </interface>
+        <fqname>@1.1::IHidlVppService/vppService</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.wifi.hostapd</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -854,6 +874,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISupplicantVendor/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.wigig.supptunnel</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISuppTunnelProvider</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISuppTunnelProvider/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.ims.callinfo</name>
